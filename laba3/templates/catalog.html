@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог товарів</title>
+</head>
+<body bgcolor="#f8edeb">
+    <h2>Каталог товарів</h2>
+    {% load static %}
+    <img src="{% static 'img/tree.jfif' %}" alt="Дерево">
+
+    <footer>
+        <p>© 2024 Мій вебсайт. Усі права захищені.</p>
+        <nav>
+        <ul>
+            <li><a href="{% url 'contact' %}">Контакти</a></li>
+            <li><a href="{% url 'home' %}">Головна</a></li>
+            <li><a href="{% url 'shopping_cart' %}">Кошик</a></li>
+            <li><a href="{% url 'about' %}">Про нас</a></li>
+        </ul>
+    </nav>
+    </footer>
+</body>
+</html>

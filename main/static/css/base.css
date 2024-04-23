@@ -1,0 +1,36 @@
+body{
+			background: #222;
+			color: #eee;
+			text-align: center;
+		}
+		.form{
+			text-align: left;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		a {
+  			color: hotpink;
+		}
+		.links {
+            position: bottom;
+            bottom: 10px;  /* Можете налаштувати відстань від нижнього краю */
+        }
+		/* Стилі для повідомлень про успіх */
+		.messages .success {
+		    color: green;
+		}
+
+		/* Стилі для попереджувальних повідомлень */
+		.messages .warning {
+		    color: orange;
+		}
+
+		/* Стилі для повідомлень про помилку */
+		.messages .error {
+		    color: red;
+		}
+
+		/* Стилі для інформаційних повідомлень */
+		.messages .info {
+		    color: blue;
+		}

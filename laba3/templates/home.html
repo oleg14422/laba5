@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашня сторінка</title>
+</head>
+<body>
+    <h2>Домашня сторінка</h2>
+
+    <footer>
+        <p>© 2024 Мій вебсайт. Усі права захищені.</p>
+    <nav>
+        <ul>
+            <li><a href="{% url 'contact' %}">Контакти</a></li>
+            <li><a href="{% url 'shopping_cart' %}">Кошик</a></li>
+            <li><a href="{% url 'about' %}">Про нас</a></li>
+            <li><a href="{% url 'catalog' %}">Каталог</a></li>
+        </ul>
+    </nav>
+    </footer>
+</body>
+</html>

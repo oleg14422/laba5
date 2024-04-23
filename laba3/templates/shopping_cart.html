@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик</title>
+</head>
+<body bgcolor="#f8edeb">
+    <h2>Кошик</h2>
+
+    <p>Список товарів</p>
+    <table border="1">
+    <tr>
+        <th>Назва</th>
+        <th>Ціна</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Сажанець</td>
+        <td>300$</td>
+    </tr>
+    <tr>
+        <td>1</td>
+    </tr>
+</table>
+
+    <audio controls>
+        {% load static %}
+    <source src="{% static 'mp3/low-honor-dead-eye-made-with-Voicemod.mp3' %}" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
+    <video controls width="500" height="auto">
+    <source src="{% static 'mp4/istockphoto-1286848871-640_adpp_is.mp4' %}" type="video/mp4">
+    Your browser does not support the video element.
+</video>
+
+    <footer>
+        <p>© 2024 Мій вебсайт. Усі права захищені.</p>
+    <nav>
+        <ul>
+            <li><a href="{% url 'contact' %}">Контакти</a></li>
+            <li><a href="{% url 'home' %}">Головна</a></li>
+            <li><a href="{% url 'about' %}">Про нас</a></li>
+            <li><a href="{% url 'catalog' %}">Каталог</a></li>
+        </ul>
+    </nav>
+    </footer>
+</body>
+</html>

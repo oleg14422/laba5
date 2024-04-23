@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Різниця в ціні</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script>
+        function sendDataToServer() {
+    fetch('/diffapi', {
+        method: 'GET'
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById("symbol").innerHTML = "Символ: " + data.symbol;
+        document.getElementById("spot_price").innerHTML = "спотова ціна: " + data.spot_price;
+        document.getElementById("f_price").innerHTML = "ф'ючерсна ціна: "+data.f_price;
+        document.getElementById("p_diff").innerHTML = "різниця в ціні: " + data.price_diff;
+        document.getElementById("diff").innerHTML = "відсоток: " + data.diff;
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
+}
+
+setInterval(sendDataToServer, 5000);
+
+    </script>
+</head>
+<body>
+    <h2>Різниця в спотовій та ф'ючерсній ціні</h2>
+    <p id="symbol">Символ: {{symbol}}</p>
+    <p id="spot_price">спотова ціна: {{spot_price}}</p>
+    <p id="f_price">ф'ючерсна ціна: {{f_price}}</p>
+    <p id="p_diff">різниця в ціні: {{p_diff}}</p>
+    <p id="diff">відсоток: {{diff_}}</p>
+</body>
+</html>
